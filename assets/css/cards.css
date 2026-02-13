@@ -1,0 +1,101 @@
+/* Section des cartes de compétences */
+.skills-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill-card {
+    background: #4169e1;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%; /* Par défaut, 3 cartes par ligne */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card h3 {
+    margin: 0;
+    color: #fcfffe;
+}
+
+.skill-card p {
+    color: #fcfffe;
+    font-size: 0.9em;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsivité pour les cartes */
+@media (min-width: 1200px) {
+    .skill-card {
+        width: 23%; /* 4 cartes par ligne */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .skill-card {
+        width: 30%; /* 3 cartes par ligne */
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .skill-card {
+        width: 45%; /* 2 cartes par ligne */
+    }
+}
+
+@media (max-width: 575px) {
+    .skill-card {
+        width: 100%; /* 1 carte par ligne */
+    }
+}
+
+/* Section des projets */
+.project-section {
+    margin-bottom: 20px;
+}
+
+.dropdown {
+    cursor: pointer;
+    font-weight: bold;
+    color: #fbfbfc;
+    transition: color 0.3s;
+}
+
+.dropdown:hover {
+    color: #fcfffe;
+}
+
+.project-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.project-images img {
+    width: 100%; /* Largeur d'image ajustée */
+    height: 100%; /* Hauteur d'image ajustée */
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.project-images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgb(251, 251, 252);
+}
+
+/* Responsivité pour les images de projet */
+@media (max-width: 768px) {
+    .project-images img {
+        width: 100%; /* Images ajustées pour écrans plus petits */
+        height: auto; /* Ajustement de la hauteur pour éviter déformation */
+    }
+}
