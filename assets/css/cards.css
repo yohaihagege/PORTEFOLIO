@@ -2,37 +2,43 @@
 .skills-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .skill-card {
     background: #4169e1;
     border-radius: 8px;
-    padding: 20px;
-    width: 30%; /* Par défaut, 3 cartes par ligne */
+    padding: 22px;
+    width: calc(25% - 1px); /* 4 colonnes avec espace maximal */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .skill-logo {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 50px;
 }
 
 .skill-logo i {
-    font-size: 48px;
+    font-size: 42px;
     color: #fcfffe;
     transition: transform 0.3s;
 }
 
 .skill-logo svg {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
     color: #fcfffe;
     transition: transform 0.3s;
 }
@@ -43,13 +49,20 @@
 }
 
 .skill-card h3 {
-    margin: 0;
+    margin: 8px 0;
     color: #fcfffe;
+    font-size: 1em;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .skill-card p {
     color: #fcfffe;
-    font-size: 0.9em;
+    font-size: 0.8em;
+    line-height: 1.2;
+    word-wrap: break-word;
+    hyphens: auto;
+    margin: 4px 0;
 }
 
 .skill-card:hover {
@@ -60,25 +73,26 @@
 /* Responsivité pour les cartes */
 @media (min-width: 1200px) {
     .skill-card {
-        width: 23%; /* 4 cartes par ligne */
+        width: calc(25% - 1px); /* 4 colonnes avec espace maximal */
     }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
     .skill-card {
-        width: 30%; /* 3 cartes par ligne */
+        width: calc(33.33% - 1px); /* 3 colonnes avec espace maximal */
     }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
     .skill-card {
-        width: 45%; /* 2 cartes par ligne */
+        width: calc(50% - 1px); /* 2 colonnes avec espace maximal */
     }
 }
 
 @media (max-width: 575px) {
     .skill-card {
-        width: 100%; /* 1 carte par ligne */
+        width: 100%; /* 1 colonne pour mobile */
+        max-width: 350px;
     }
 }
 
