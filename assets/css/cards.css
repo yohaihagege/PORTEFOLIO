@@ -16,6 +16,32 @@
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.skill-logo {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.skill-logo i {
+    font-size: 48px;
+    color: #fcfffe;
+    transition: transform 0.3s;
+}
+
+.skill-logo svg {
+    width: 48px;
+    height: 48px;
+    color: #fcfffe;
+    transition: transform 0.3s;
+}
+
+.skill-card:hover .skill-logo i,
+.skill-card:hover .skill-logo svg {
+    transform: scale(1.1);
+}
+
 .skill-card h3 {
     margin: 0;
     color: #fcfffe;
