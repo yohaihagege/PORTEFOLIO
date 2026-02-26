@@ -1,0 +1,77 @@
+/* Styles pour les boutons et cartes de la page intermédiaire des stages */
+.stage-button {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stage-button:hover {
+    transform: translateY(-5px);
+}
+
+.stage-card {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    border-radius: 15px;
+    padding: 30px;
+    min-width: 280px;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.stage-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, #34495e 0%, #2980b9 100%);
+}
+
+.stage-card h3 {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stage-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive design pour les écrans plus petits */
+@media (max-width: 768px) {
+    .stage-card {
+        min-width: 250px;
+        max-width: 300px;
+        padding: 25px;
+    }
+    
+    .stage-card h3 {
+        font-size: 1.3em;
+    }
+    
+    .stage-card p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .stage-card {
+        min-width: 200px;
+        max-width: 250px;
+        padding: 20px;
+    }
+    
+    .stage-card h3 {
+        font-size: 1.2em;
+    }
+    
+    .stage-card p {
+        font-size: 0.85em;
+    }
+}
