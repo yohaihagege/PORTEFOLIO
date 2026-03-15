@@ -1,77 +1,201 @@
-/* Styles pour les boutons et cartes de la page intermédiaire des stages */
+/* Styles globaux pour les articles de stage */
+#main article#stages,
+#main article#stage-premiere-annee,
+#main article#stage-deuxieme-annee {
+    width: 65rem;
+    max-width: 95%;
+    padding: 3.5rem 2.5rem 2rem 2.5rem;
+}
+
+/* Page de sélection des stages */
 .stage-button {
     text-decoration: none;
     color: inherit;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .stage-button:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
 }
 
 .stage-card {
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-    border-radius: 15px;
-    padding: 30px;
-    min-width: 280px;
-    max-width: 350px;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.4) 0%, rgba(52, 152, 219, 0.4) 100%);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    min-width: 300px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .stage-card:hover {
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-    border-color: rgba(255, 255, 255, 0.2);
-    background: linear-gradient(135deg, #34495e 0%, #2980b9 100%);
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.5) 0%, rgba(44, 62, 80, 0.5) 100%);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
 }
 
 .stage-card h3 {
-    color: white;
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.6em;
+    margin-bottom: 10px;
     letter-spacing: 1px;
 }
 
-.stage-card p {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1em;
-    line-height: 1.5;
-    margin: 0;
+/* Mise en page interne des détails de stage */
+.stage-header {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    align-items: center;
 }
 
-/* Responsive design pour les écrans plus petits */
-@media (max-width: 768px) {
-    .stage-card {
-        min-width: 250px;
-        max-width: 300px;
-        padding: 25px;
-    }
-    
-    .stage-card h3 {
-        font-size: 1.3em;
-    }
-    
-    .stage-card p {
-        font-size: 0.9em;
-    }
+.stage-image-container {
+    flex: 0 0 300px;
+    text-align: center;
 }
 
-@media (max-width: 480px) {
-    .stage-card {
-        min-width: 200px;
-        max-width: 250px;
-        padding: 20px;
+.stage-image {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.stage-intro {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #fff;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    padding-bottom: 10px;
+}
+
+.section-title i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+.stage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.stage-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.stage-section:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.stage-section.full-width {
+    grid-column: span 2;
+}
+
+.stage-subtitle {
+    font-size: 1.3em;
+    color: #87CEEB;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stage-text {
+    line-height: 1.7;
+    text-align: justify;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Tags de technologies */
+.tech-tags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-tags li {
+    background: rgba(52, 152, 219, 0.2);
+    border: 1px solid rgba(52, 152, 219, 0.4);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+/* Étapes de processus */
+.process-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.step {
+    text-align: center;
+    padding: 15px;
+}
+
+.step-icon {
+    font-size: 2em;
+    color: #3498db;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Showcase de projet */
+.project-showcase {
+    margin: 40px 0;
+}
+
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.project-images img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.project-images img:hover {
+    transform: scale(1.05);
+    border-color: #3498db;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Responsivité */
+@media screen and (max-width: 980px) {
+    .stage-header {
+        flex-direction: column;
     }
-    
-    .stage-card h3 {
-        font-size: 1.2em;
+    .stage-image-container {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 400px;
     }
-    
-    .stage-card p {
-        font-size: 0.85em;
+    .stage-grid, .process-steps {
+        grid-template-columns: 1fr;
+    }
+    .stage-section.full-width {
+        grid-column: span 1;
     }
 }
